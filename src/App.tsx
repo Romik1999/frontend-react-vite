@@ -1,11 +1,11 @@
+import EnhancedTable from "./components/table";
 
 function App() {
-
-  return (
-    <>
-
-    </>
-  )
+    return (
+        <>
+            <EnhancedTable/>
+        </>
+    )
 }
 
 export default App
