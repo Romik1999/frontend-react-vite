@@ -1,32 +1,26 @@
 import * as React from "react";
 
-export interface IData {
+export interface Data {
     id: number;
-    calories: number;
-    carbs: number;
-    fat: number;
-    name: string;
-    protein: number;
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
 }
 
 export type Order = 'asc' | 'desc';
 
-export interface EnhancedTableProps {
-    numSelected: number;
-    onRequestSort: (event: React.MouseEvent<unknown>, property: keyof IData) => void;
-    onSelectAllClick: (event: React.ChangeEvent<HTMLInputElement>) => void;
-    order: Order;
-    orderBy: string;
-    rowCount: number;
-}
-
 export interface HeadCell {
-    disablePadding: boolean;
-    id: keyof IData;
+    id: keyof Data;
     label: string;
     numeric: boolean;
 }
 
-export interface EnhancedTableToolbarProps {
+export interface EnhancedTableProps {
     numSelected: number;
+    onRequestSort: (event: React.MouseEvent<unknown>, property: keyof Data) => void;
+    onSelectAllClick: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    order: Order;
+    orderBy: string;
+    rowCount: number;
 }
